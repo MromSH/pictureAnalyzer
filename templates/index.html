@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Проверка картинок</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <div class="mainFrame">
+            <div style="display: flex; justify-content: center;">
+              <h1 style="color: #115124; font-size: 40px">Проверка картинок</h1>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-bottom: 10px;">
+                <input class="InputFiles" type="file" id="fileInput" multiple accept=".zip,.rar,.7z,.tar,.gz,.jpg,.png,.jpeg,.tif,.tiff">
+                    <button type="button" class="normal-button" onclick="document.getElementById('fileInput').click()">
+                        Выбрать файлы
+                    </button>
+                    <button type="button" id="uploadButton" class="normal-button" onclick="fileUploading()">
+                    Проверить
+                    </button>
+            </div>
+        </div>
+        <div class="normal-text-area" style="margin-top: 30px">
+            <div id="fileInput" class="success"></div>
+            <div id="fileNames" class="success"></div>
+            <div id="result" class="success"></div>
+        </div>
+        <div id="cardContainer" class="card-container"></div>
+        <button id="reportButton" style="display: block; margin: 20px auto;" class="normal-button" onclick="downloadReport()">Скачать отчет</button>
+        <script src="/static/script.js"></script>
+    </body>
+</html>
